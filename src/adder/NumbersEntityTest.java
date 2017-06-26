@@ -23,4 +23,30 @@ public class NumbersEntityTest {
 		assertEquals(expected, actual);
 	}
 	
+	@Test
+	public void testGetResultWhenFirstNumberIsMAX_VALUE() {
+		NumbersEntity ne = new NumbersEntity();
+		ne.setFirstNumber(Integer.MAX_VALUE);
+		int expected = Integer.MAX_VALUE;
+		int actual = ne.getResult();
+		assertEquals(expected, actual);
+	}	
+	
+	@Test
+	public void testGetResultWhenFirstNumberIsMAX_VALUEAndSecondIsOne() {
+		NumbersEntity ne = new NumbersEntity();
+		ne.setFirstNumber(Integer.MAX_VALUE);
+		ne.setSecondNumber(1);
+		int expected = Integer.MAX_VALUE + 1 ;
+		int actual = ne.getResult();
+		assertEquals(expected, actual);
+		assertTrue(Integer.MAX_VALUE + 1 > Integer.MAX_VALUE);
+		// TODO: write OCL for this!
+	}	
 }
+
+
+
+
+
+

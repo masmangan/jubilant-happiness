@@ -18,7 +18,13 @@ public class NumbersEntity {
 		this.secondNumber = secondNumber;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getResult() {
+		// TODO: write OCL for this!
+		// See: testGetResultWhenFirstNumberIsMAX_VALUEAndSecondIsOne()
 		return firstNumber + secondNumber;
 	}
 }
