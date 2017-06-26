@@ -32,7 +32,7 @@ public class NumbersEntityTest {
 		assertEquals(expected, actual);
 	}	
 	
-	@Test
+	@Test(expected=IllegalArgumentException.class)
 	public void testGetResultWhenFirstNumberIsMAX_VALUEAndSecondIsOne() {
 		NumbersEntity ne = new NumbersEntity();
 		ne.setFirstNumber(Integer.MAX_VALUE);
